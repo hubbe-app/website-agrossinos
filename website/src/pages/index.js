@@ -4,15 +4,14 @@ import { fetchPage, fetchGlobalSettings } from 'hubbe-aio-ws/dist'
 
 export const getServerSideProps = async () => {
   const globalSettings = await fetchGlobalSettings();
-  console.log(globalSettings);
-  
-  return { props: {globalSettings } }
+  const pageObject = await fetchPage('home');
+  return { props: { pageObject, globalSettings } }
 }
 
-const MainRoot = ({ globalSettings }) => {
+const MainRoot = ({ pageObject, globalSettings }) => {
   return (
     <Wrapper>
-      <Insurance globalSettings={globalSettings} />
+      <Insurance pageObject={pageObject} globalSettings={globalSettings} />
     </Wrapper>
   );
 };

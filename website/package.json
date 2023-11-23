@@ -31,7 +31,7 @@
     "sass": "^1.57.1",
     "slick": "^1.12.2",
     "slick-carousel": "^1.8.1", 
-    "hubbe-aio-ws": "git://github.com/hubbe-app/aio-ws.git#77ce7f6",
+    "hubbe-aio-ws": "git://github.com/hubbe-app/aio-ws.git#dec404e",
     "@directus/sdk": "^13.0.0"
   },
   "devDependencies": {

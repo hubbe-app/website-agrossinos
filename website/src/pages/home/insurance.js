@@ -18,7 +18,7 @@ import WhyChoose from "../../components/home-page/home-1/WhyChoose";
 const Insurance = ({ pageObject, globalSettings }) => {
   return (
     <>
-      {/* <Seo pageObject={pageObject} globalSettings={globalSettings} /> */}
+      <Seo pageObject={pageObject} globalSettings={globalSettings} />
       {/* <!-- 
       =============================================
 			Theme Default Menu

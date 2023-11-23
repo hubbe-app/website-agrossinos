@@ -1411,9 +1411,9 @@ html-minifier@3.5.2:
     relateurl "0.2.x"
     uglify-js "3.0.x"
 
-"hubbe-aio-ws@git://github.com/hubbe-app/aio-ws.git#554de2d":
+"hubbe-aio-ws@git://github.com/hubbe-app/aio-ws.git#dec404e":
   version "0.0.1"
-  resolved "git://github.com/hubbe-app/aio-ws.git#554de2da17f0d5e51ff7c46a7155684055216948"
+  resolved "git://github.com/hubbe-app/aio-ws.git#dec404ed6f37545cd8e0d08a8fee10ac62d31fbf"
 
 ignore@^5.2.0:
   version "5.2.4"
