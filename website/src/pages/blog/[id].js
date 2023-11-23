@@ -1,5 +1,5 @@
 import Seo from "../../components/common/Seo";
-import DefaulHeader from "../../components/header/DefaulHeader";
+import DefaulHeader from "../../components/header/Header2";
 import DefaultFooter from "../../components/footer/DefaultFooter";
 import SearchBox from "../../components/blog/SearchBox";
 import Category from "../../components/blog/Category";

@@ -14,10 +14,11 @@ import Service from "../../components/home-page/home-1/Service";
 import Testimonial from "../../components/home-page/home-1/Testimonial";
 import WhyChoose from "../../components/home-page/home-1/WhyChoose";
 
-const Insurance = () => {
+
+const Insurance = ({ pageObject, globalSettings }) => {
   return (
     <>
-      <Seo pageTitle="Insurance" />
+      {/* <Seo pageObject={pageObject} globalSettings={globalSettings} /> */}
       {/* <!-- 
       =============================================
 			Theme Default Menu
@@ -282,14 +283,14 @@ const Insurance = () => {
                   </Link>
                 </div>
                 <p className="text-white opacity-75 fs-18 mt-15 mb-45 lg-mb-10">
-                  Best Insurance Company.
+                  { globalSettings.phone }
                 </p>
                 <p className="text-white opacity-50 fs-15 m0 d-none d-lg-block">
                   © {new Date().getFullYear()} - {new Date().getFullYear() + 1}{" "}
                   jano inc.
                 </p>
               </div>
-              <Footer />
+              <Footer globalSettings={globalSettings} />
             </div>
           </div>
           {/* /.inner-wrapper */}

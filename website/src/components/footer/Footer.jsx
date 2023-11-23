@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({ globalSettings }) => {
   const links = [
     {
       id: 1,
@@ -63,8 +63,7 @@ const Footer = () => {
       <div className="col-xl-3 col-lg-4 col-md-5 mb-30">
         <h5 className="footer-title text-white fw-500">Address</h5>
         <p className="text-white opacity-75 mb-35">
-          2190 Zinai terrace, Lake view <br />
-          house state, 10 no road.
+            { globalSettings.address }
         </p>
         <ul className="d-flex social-icon style-none">
           {socialIcons.map((icon, index) => (

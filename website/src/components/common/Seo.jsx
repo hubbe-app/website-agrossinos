@@ -1,11 +1,10 @@
 import Head from "next/head";
 
-const Seo = ({ pageTitle }) => (
+const Seo = ({ pageObject, globalSettings }) => (
   <>
     <Head>
       <title>
-        {pageTitle &&
-          `${pageTitle} || Jano - Creative Multipurpose React NextJS Template}`}
+        { globalSettings?.default_page_title }
       </title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>

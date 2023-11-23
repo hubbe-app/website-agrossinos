@@ -19,6 +19,11 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
+"@directus/sdk@^13.0.0":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@directus/sdk/-/sdk-13.0.1.tgz#66397a459a410847ca4f509382bb04bdf83dd59c"
+  integrity sha512-zKus2H2AC6NkYwYH1OTfTePHrCt4HxWC41JvQYiAT8j227bmE1adMQ/aAPqLwTIDeaDpR+BDJNNOFfq+3btVSg==
+
 "@eslint/eslintrc@^1.4.1":
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.4.1.tgz#af58772019a2d271b7e2d4c23ff4ddcba3ccfb3e"
@@ -205,9 +210,9 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^18":
-  version "18.2.34"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.34.tgz#aed20f19473721ba328feb99d1ec3307ebc1a8dd"
-  integrity sha512-U6eW/alrRk37FU/MS2RYMjx0Va2JGIVXELTODaTIYgvWGCV4Y4TfTUzG8DdmpDNIT0Xpj/R7GfyHOJJrDttcvg==
+  version "18.2.35"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.35.tgz#bacdc6d139a4d6d47e5186e1a96952c65e1f3792"
+  integrity sha512-LG3xpFZ++rTndV+/XFyX5vUP7NI9yxyk+MQvBDq+CVs8I9DLSc3Ymwb1Vmw5YDoeNeHN4PDZa3HylMKJYT9PNQ==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -1405,6 +1410,10 @@ html-minifier@3.5.2:
     param-case "2.1.x"
     relateurl "0.2.x"
     uglify-js "3.0.x"
+
+"hubbe-aio-ws@git://github.com/hubbe-app/aio-ws.git#554de2d":
+  version "0.0.1"
+  resolved "git://github.com/hubbe-app/aio-ws.git#554de2da17f0d5e51ff7c46a7155684055216948"
 
 ignore@^5.2.0:
   version "5.2.4"
