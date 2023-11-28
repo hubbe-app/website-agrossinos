@@ -15,7 +15,7 @@ import Testimonial from "../../components/home-page/home-9/Testimonial";
 import Tools from "../../components/home-page/home-9/Tools";
 import Social from "../../components/home-page/home-9/Social";
 
-const PersonalPortfolio = () => {
+const PersonalPortfolio = (props) => {
   return (
     <>
       <Seo pageTitle="Persoanl Portfolio" />
@@ -37,7 +37,7 @@ const PersonalPortfolio = () => {
 				Theme Hero Banner
 			============================================== 
 			--> */}
-      <Hero />
+      <Hero blockHero={props.blockHero} />
 
       {/* 
 			=============================================
@@ -55,7 +55,10 @@ const PersonalPortfolio = () => {
                 0<span className="counter">7</span>+
               </div>
               <h2 className="title fw-500 tx-dark">
-                Years Experience in field
+              
+
+                
+
               </h2>
             </div>
           </div>

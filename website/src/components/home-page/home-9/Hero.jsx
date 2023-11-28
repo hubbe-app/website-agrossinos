@@ -1,4 +1,4 @@
-const Hero = () => {
+const Hero = (props) => {
   const images = [
     {
       src: "/images/shape/shape_56.svg",
@@ -56,7 +56,7 @@ const Hero = () => {
             data-aos-delay="300"
           >
             <h1 className="hero-heading fw-500 font-recoleta tx-dark mb-65 lg-mb-40">
-              Building digital products, brands &amp; expereince
+              { props.blockHero.headline }
             </h1>
           </div>
           <div
@@ -65,18 +65,21 @@ const Hero = () => {
             data-aos-delay="400"
           >
             <p className="text-lg pe-xxl-4 ps-xxl-4 mb-75 lg-mb-50">
-              Janu is your online team mangement tool that easy and prompt
+              <div dangerouslySetInnerHTML={ { __html: props.blockHero.content }}></div>
             </p>
           </div>
         </div>
-        <a
-          href="#s5"
+
+        { props.blockHero.actions?.map((action, index) =>   <a
+          href={action.href}
           className="btn-eight"
           data-aos="fade-up"
           data-aos-delay="500"
         >
-          Contact Me
-        </a>
+          { action.label }
+        </a>) }
+
+      
       </div>
 
       {/* Fancy Image Block One */}
