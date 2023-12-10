@@ -1,8 +1,9 @@
-import Content from '@/components/Content';
-import History from '@/components/History';
-import Mvv from '@/components/OrgMissionVisionValues';
-import SecondBanner from '@/components/SecondBanner';
 import React from 'react';
+import Content from '@/components/Content';
+import Differentials from '@/components/Differentials';
+import History from '@/components/History';
+import MainBanner from '@/components/MainBanner';
+import Mvv from '@/components/OrgMissionVisionValues';
 
 export default function WhoWeAre() {
   const contentOne = "A Agrossinos é uma corretora de grãos, de insumos para rações e de alimentos, focada no agronegócio, atua em todo o Rio Grande do Sul e está situada em São Leopoldo.";
@@ -11,11 +12,16 @@ export default function WhoWeAre() {
   return (
     <div>
       <div className="h-[84vh]">
-        <SecondBanner />
+        <MainBanner
+          videoSrc={require("../../public/assets/video2.mp4")}
+          title="Quem Somos"
+          minorSubtitle="Mais de 40 anos fazendo história no sul do país com proximidade, confiança e comprometimento em cada negócio."
+        />
       </div>
       <Content contentOne={contentOne} contentTwo={contentTwo} />
       <Mvv />
       <History />
+      <Differentials />
     </div>
   )
 }

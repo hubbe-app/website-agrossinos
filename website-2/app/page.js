@@ -10,7 +10,13 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <div className="h-[84vh]">
-        <MainBanner />
+        <MainBanner
+          videoSrc={require("../public/assets/video.mp4")}
+          title="A ponte para grandes"
+          subtitle="negócios no agro"
+          buttonText="Saiba mais"
+          buttonLink="/"
+        />
       </div>
       <Content contentOne={contentOne} contentTwo={contentTwo} />
       <Solutions />

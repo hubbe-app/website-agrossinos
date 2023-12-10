@@ -24,12 +24,12 @@ export default function History() {
                 <h1 className="text-[#4C5938] font-bold md:text-[60px] text-[54px]">História</h1>
             </div>
             <div className="2xl:px-56 px-2 flex flex-col lg:flex-row w-full justify-between my-8">
-                <div clasName="md:w-[486px] md:h-[605px] w-[360px] h-[448px] flex flex-row justify-center items-center">
+                <div className="md:w-[486px] md:h-[605px] w-[360px] h-[448px] flex flex-row justify-center items-center">
                     <Image src={man.src} width={486} height={40} alt="Imagem do fundador da Agrossinos" />
                 </div>
                 <div className="w-full h-full md:w-1/2 flex flex-col gap-2">
                     <div className="text-[#090808]">
-                        <h1 className="text-[32px] font-extrabold">Empreendedorismo, pioneirismo e história</h1>
+                        <h1 className="lg:text-[52px] text-[32px] font-extrabold">Empreendedorismo, pioneirismo e história</h1>
                         <h1></h1>
                     </div>
                     <div className="flex flex-col gap-3 text-[#090808] md:text-[24px] text-[16px] justify-between md:h-full">

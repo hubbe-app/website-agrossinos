@@ -3,13 +3,15 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Dropdown } from 'flowbite-react';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faBars } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../public/assets/logo.png';
 
 export default function Navbar() {
-const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
@@ -23,6 +25,22 @@ const [isMobile, setIsMobile] = useState(false);
     };
   }, []);
 
+  const handleToggleMenu = () => {
+    setIsOpenMenu(!isOpenMenu);
+  };
+
+  const handleCloseDropdowns = () => {
+    setIsOpen(false);
+  };
+
+    const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div>
       {isMobile ? (
@@ -33,19 +51,39 @@ const [isMobile, setIsMobile] = useState(false);
             </Link>
           </div>
           <div>
-            <Dropdown inline label={<FontAwesomeIcon icon={ faBars } className="text-black text-[32px]" />} dismissOnClick={false} arrowIcon={false}>
+            <Dropdown
+              inline
+              label={<FontAwesomeIcon icon={faBars} className="text-black text-[32px]" />}
+              dismissOnClick={false}
+              arrowIcon={false}
+              isOpen={isOpenMenu}
+              onToggle={handleToggleMenu}
+            >
               <div className="flex flex-col p-2 items-start gap-2">
-                <Link href="/" target="_blank">
-                  <button className="" type="button">Home</button>
+                <Link href="/">
+                  <button className="text-[#4C5938]" type="button">
+                    Home
+                  </button>
                 </Link>
-                <Link href="/quemsomos" target="_blank">
-                  <button type="button">A Agrossinos</button>
+                <Link href="/quemsomos">
+                  <button className="text-[#4C5938]" type="button">
+                    A Agrossinos
+                  </button>
                 </Link>
-                <Link href="/" target="_blank">
-                  <button type="button">Soluções</button>
+                <Link href="/insumos">
+                  <button className="text-[#4C5938]" type="button">
+                    Insumos para rações
+                  </button>
                 </Link>
-                <Link href="/" target="_blank">
-                  <button type="button">Fale Conosco</button>
+                <Link href="/alimentos">
+                  <button className="text-[#4C5938]" type="button">
+                    Alimentos
+                  </button>
+                </Link>
+                <Link href="/faleconosco">
+                  <button className="text-[#4C5938]" type="button">
+                    Fale Conosco
+                  </button>
                 </Link>
               </div>
             </Dropdown>
@@ -60,22 +98,30 @@ const [isMobile, setIsMobile] = useState(false);
           </div>
           <div className="flex flex-row gap-10 justify-end w-full">
             <Link href="/">
-              {/* <button className="bg-white text-[#67A6DB] font-medium rounded-full px-4 py-2 w-56 hover:bg-[#67A6DB] hover:text-white hover:border hover:border-white" type="button">Acesso Candidato</button> */}
                 <p className="text-[#4C5938]">Home</p>
             </Link>
             <Link href="/quemsomos">
-              {/* <button className="bg-white text-[#67A6DB] font-medium rounded-full px-4 py-2 w-56 hover:bg-[#67A6DB] hover:text-white hover:border hover:border-white" type="button">Acesso Empresa</button> */}
                 <p className="text-[#4C5938]">A Agrossinos</p>
             </Link>
-            <Link href="/">
-                <p className="text-[#4C5938]">Soluções</p>
-            </Link>
-            <Link href="/">
+            <Dropdown inline label={<span className="text-[#4C5938] flex flex-row items-center gap-2 relative z-30">Soluções <FontAwesomeIcon icon={ faCaretDown } className="" /></span>} isOpen={isOpen} onToggle={handleToggle} dismissOnClick={false} arrowIcon={false}>
+              <div className="flex flex-col p-2 items-start gap-1">
+                <Link href="/insumos">
+                  <button className="text-[#4C5938]" type="button">
+                    Insumos para rações
+                  </button>
+                </Link>
+                <Link href="/alimentos">
+                  <button  className="text-[#4C5938]"type="button">Alimentos</button>
+                </Link>
+              </div>
+            </Dropdown>
+            <Link href="/faleconosco">
                 <p className="text-[#4C5938]">Fale Conosco</p>
             </Link>
           </div>
         </div>
       )}
     </div>
-  )
+  );
 }
+
