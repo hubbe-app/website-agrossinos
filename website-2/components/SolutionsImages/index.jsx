@@ -51,7 +51,7 @@ export default function SolutionsImages() {
           onMouseEnter={() => setHovered1(true)}
           onMouseLeave={() => setHovered1(false)}
         >
-          <Link href="/">
+          <Link href="/insumos">
             <div className="flex flex-col gap-10" style={{ ...overlayStyle, opacity: hovered1 ? 1 : 0 }}>
               <p className="xl:text-[60px] text-[35px] text-center font-bold">Grãos e insumos para rações</p>
               <button className="py-2 px-10 bg-white rounded-full text-[#4C5938] text-[20px]">Conheça</button>
@@ -64,7 +64,7 @@ export default function SolutionsImages() {
           onMouseEnter={() => setHovered2(true)}
           onMouseLeave={() => setHovered2(false)}
         >
-          <Link href="/">
+          <Link href="/alimentos">
             <div className="flex flex-col gap-10" style={{ ...overlayStyle, opacity: hovered2 ? 1 : 0 }}>
               <p className="xl:text-[60px] text-[35px] text-center font-bold">Alimentos</p>
               <button className="py-2 px-10 bg-white rounded-full text-[#4C5938] text-[20px]">Conheça</button>
