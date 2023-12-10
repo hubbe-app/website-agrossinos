@@ -15,10 +15,11 @@ export default function Insumos() {
     <div>
       <div className="h-[84vh]">
         <MainBanner
-          videoSrc={require("../../public/assets/video4.mp4")}
-          title="Negociações de Alimentos"
-          minorSubtitle="Legumes (batata)"
-          minorSubtitleTwo="Mercados: avícola, bovinos e laticínio"
+        //   videoSrc={require("../../public/assets/video4.mp4")}
+            videoSrc="https://s3-figma-videos-production-sig.figma.com/video/1024672175368923531/TEAM/4698/66df/-2f07-4a60-9748-b7cff76345f9?Expires=1702857600&Signature=SzcsQetGQu9bzQR5MbKcB4gINY3pvzYxLddkp0g2Nt6lDhWtxOjU135th3ZyMlWWA-WLUbcZTDP8jq0AggMxW6FuPax4V7na~oLRth6CGndiQ~JYnOUVpBx6gt3fm9IYE~9LCQuaWGn8BELxkKhRnL9j9IjhFJXSvJBKtBGwiC8cRas1w1IXNa7K48B~Cz~uSjGYTgtaBdjfRzWcL0fLGybqRJYfTq1LeNBY1k~fBET3ZV2zJSEaeMyGYeFhZXC-WIZQdj9LjL0s8pltihjHerUT55FwHcY0oIDhdcoQyuDJszHB6WI9gxRhZF6IfMQn60giWtoV87u~KbWvO8oQlw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            title="Negociações de Alimentos"
+            minorSubtitle="Legumes (batata)"
+            minorSubtitleTwo="Mercados: avícola, bovinos e laticínio"
         />
       </div>
       <Content contentOne={contentOne} contentTwo={contentTwo} />
