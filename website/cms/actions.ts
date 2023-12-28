@@ -20,10 +20,6 @@ const getHeaders = () => {
    return result;
 }
 
-const delay = async (ms: number) => {
-   return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 export const handleContactForm = async (data: InterestData): Promise<any> => {
 
    let interestData: InterestData = { ...data };
