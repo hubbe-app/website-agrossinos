@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { handleContactForm } from '@/cms/actions';
+import { handleContactForm as handleContactFormAction } from '@/cms/actions'; // Rename the import
 import { Label, TextInput, Textarea } from 'flowbite-react';
 
 export default function Form() {
@@ -9,14 +9,12 @@ export default function Form() {
   const [email, setEmail] = useState('');
   const [comment, setComment] = useState('');
 
-  const handleContactForm = async (formData) => {
-    console.log(formData);
-    return { ...formData};
+  const handleContactFormLocal = async (formData) => {
+    return { ...formData };
   };
 
   const handleContactFormAsync = async (event) => {
-    const result = await handleContactForm({ name, email, comment });
-    alert(JSON.stringify(result));
+    const result = await handleContactFormAction({ name, email, comment });
   }
 
   return (
