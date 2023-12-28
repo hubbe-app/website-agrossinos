@@ -20,7 +20,7 @@ const getHeaders = () => {
    return result;
 }
 
-export const handleContactForm = async (data: InterestData): Promise<any> => {
+export const handleContactForm = async (data: InterestData): Promise<CMSReceipt> => {
 
    let interestData: InterestData = { ...data };
 
