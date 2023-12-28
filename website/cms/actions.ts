@@ -20,18 +20,16 @@ const getHeaders = () => {
    return result;
 }
 
-export const handleContactForm = async (data: FormData): Promise<any> => {
+const delay = async (ms: number) => {
+   return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-   let dump: { name: string, email: string, message: string } = { name: "", email: "", message: "" };
+export const handleContactForm = async (data: InterestData): Promise<any> => {
 
-   data.forEach((value, key) => { dump[key] = value; });
-
-   let interestData: InterestData = { ...dump };
+   let interestData: InterestData = { ...data };
 
    interestData.ip = getIPAddress();
    interestData.device = getHeaders();
-
-   console.log(interestData);
 
    // Send data to CMS
    return await createInterest(interestData);

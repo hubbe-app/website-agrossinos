@@ -155,17 +155,15 @@ export type CMSReceipt = {
 export const createInterest = async (interestData: InterestData): Promise<CMSReceipt> => {
    const client = await getCMSClient();
    try {
-      await client.request(
+      return await client.request(
          createItem(
             "agrossinos_interest",
             { ...interestData }
          )
       ).then((response) => {
-         console.log(response);
          return { success: true };
       })
    } catch (error) {
-      console.error(error);
       return { 
          success: false, 
          errors: error.errors.map(err => err.message) 
