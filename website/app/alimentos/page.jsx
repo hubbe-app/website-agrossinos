@@ -15,11 +15,9 @@ export default function Insumos() {
     <div>
       <div className="h-[84vh]">
         <MainBanner
-        //   videoSrc={require("../../public/assets/video4.mp4")}
-            videoSrc="https://s3-figma-videos-production-sig.figma.com/video/1024672175368923531/TEAM/4698/66df/-2f07-4a60-9748-b7cff76345f9?Expires=1702857600&Signature=SzcsQetGQu9bzQR5MbKcB4gINY3pvzYxLddkp0g2Nt6lDhWtxOjU135th3ZyMlWWA-WLUbcZTDP8jq0AggMxW6FuPax4V7na~oLRth6CGndiQ~JYnOUVpBx6gt3fm9IYE~9LCQuaWGn8BELxkKhRnL9j9IjhFJXSvJBKtBGwiC8cRas1w1IXNa7K48B~Cz~uSjGYTgtaBdjfRzWcL0fLGybqRJYfTq1LeNBY1k~fBET3ZV2zJSEaeMyGYeFhZXC-WIZQdj9LjL0s8pltihjHerUT55FwHcY0oIDhdcoQyuDJszHB6WI9gxRhZF6IfMQn60giWtoV87u~KbWvO8oQlw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            videoSrc="https://s3-figma-videos-production-sig.figma.com/video/1024672175368923531/TEAM/1eb0/8050/-fa83-4b80-9751-4a08f4c2cfb9?Expires=1704672000&Signature=W1Wery~2HRllrpqpGCSF7fQeoFAzgbuht9auwxjTlZIN1ltKD355N6JogqXC3clNvrqM14RUThH9S35d2vz4ERZnURIObzl9WJ5jN8A4eIVD6uHxX7e4X8Xrsh8z1vNjQ3~r8JTITSqkinGF18pAPTlPb1yB6Tva8XvArxRtl1FVGkAiaCI6B2ihvDqdYOyX3Gk7cq3WTIKkGH-oS4n2w5JoWUgOt~TlVdoxl20~bnPZE0ZTrdIdNLWRtqIz-HRU7GlGsaRu1fiW2bgcS~M99K0XzGlen8g07L6WF93eX3pWDzHGWHNIwkrq8mbZ3xORepR8d7cER9dtcDi7H12thg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             title="Negociações de Alimentos"
-            minorSubtitle="Legumes (batata)"
-            minorSubtitleTwo="Mercados: avícola, bovinos e laticínio"
+            minorSubtitle="Mercados: avícola, bovino e laticínio"
         />
       </div>
       <Content contentOne={contentOne} contentTwo={contentTwo} />

@@ -29,13 +29,13 @@ export default function History() {
                 </div>
                 <div className="w-full h-full md:w-1/2 flex flex-col gap-2">
                     <div className="text-[#090808]">
-                        <h1 className="lg:text-[52px] text-[32px] font-extrabold">Empreendedorismo, pioneirismo e história</h1>
+                        <h1 className="lg:text-[40px] text-[32px] font-extrabold">Empreendedorismo, pioneirismo e história</h1>
                         <h1></h1>
                     </div>
                     <div className="flex flex-col gap-3 text-[#090808] md:text-[24px] text-[16px] justify-between md:h-full">
                         <p>Embora esteja às vésperas de comemorar seus 20 anos como Agrossinos, teve seus primeiros passos em 1977, quando seu fundador, Gilberto Tavares, deu início a Asa Branca Comércio e Representações Ltda, em Garibaldi, RS.</p>
                         <p>Em 2004, com a mudança da família para São Leopoldo, cidade situada no Vale do Rio dos Sinos, região da Grande Porto Alegre, inicia-se então a caminhada da Agrossinos.</p>
-                        <p>Hoje, no escritório em São Leopoldo, atua junto à família, as 3 filhas fazem parte da operação da empresa, Anelisa, Tatiana e Vanessa, também o genro e nossa equipe de colaboradores.</p>
+                        <p>Unindo tradição e inovação, nossa equipe é impulsionada pelo comprometimento e pelo senso de pertencimento, construindo não apenas uma marca, mas uma família com legado que atravessa gerações.</p>
                         <p>A empresa é reconhecida no Estado como referência no setor e possui tradição de confiança e credibilidade no mercado.</p>
                     </div>
                 </div>

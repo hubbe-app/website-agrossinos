@@ -17,8 +17,7 @@ export default function Insumos() {
     <div>
       <div className="h-[84vh]">
         <MainBanner
-          // videoSrc={require("../../public/assets/video3.mp4")}
-          videoSrc="https://s3-figma-videos-production-sig.figma.com/video/1024672175368923531/TEAM/3b34/05f7/-6378-4e9d-a663-f0f5f22f2fbf?Expires=1702857600&Signature=USpcm1hePJe17qiwdtjuXnZ4KhzFoveGW8~lEdi764D1qCibwWml28lRR21LBq8UCa70BHRNsqW~tZD9EsOiaOP7WUUXFEf1MlY5vq-Y08I-4~R70zNYB0mlyarzIjRemwQBUiyDnikcU8yZCRN1Irlt4ajhBTzG0lTqNTb5T0dj32uyU1ECMAsPpgPI4pM5wgqzXmxk6yioYdljx0ghp18O6RWcLQ4GoUHmFdconBuD6EzFlWufHFHFFXkqWKvrw~KnlQngA6pwOiyhaUY-Yhe0b45SCjuifgYCp5OrxUlowlypbpMK57rlx5xyCrryPZfamTU51vubgYq-xZ~ppQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+          videoSrc="https://s3-figma-videos-production-sig.figma.com/video/1024672175368923531/TEAM/3b34/05f7/-6378-4e9d-a663-f0f5f22f2fbf?Expires=1704672000&Signature=R18lP9FrUo3nXO1hxCflI8R4dWnsoxwcRHDwmIzeNydZHnMf0IliqQAoEl-oxYYUIWTvSusNq2649w4DGIP1SyG~2e2H-lXKXarGrPA46~9szWmiiOXKBRGQi2ROBHn-VyrZRmjteuYDKSflGfFmpeWQA9zX14VrThZU2Cpw-13XLya~hw-BYyXK4OiXMgHoKFFGsHIj0m9yboppuJLCh9tc20jtFk8iPPLWOAsQSFKK9pJfgpu0w9jFCOhDLeBtAhSiBkEdRCwg5MXW1cZL1NX9OVSsaD3NdMduZ0Zr2bunSco~0OOA5PC148KhvSvGVMmTlGHSzcXzwSpxKhEmvA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
           title="Negociações de Grãos e"
           subtitle="Insumos para Rações"
         />

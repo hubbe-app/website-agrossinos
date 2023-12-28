@@ -154,9 +154,10 @@ export const createInterest = async (interestData: InterestData): Promise<CMSRec
 
    const cmsClient = await getCMSClient();
 
-   const { name, email, message } = interestData;
+   // const { name, email, message } = interestData;
 
-   console.log({ name, email, message });
+   // console.log({ name, email, message });
+   console.log("interestData: ", interestData);
 
    return { success: true };
 }
