@@ -1,6 +1,7 @@
 import {
    authentication,
    createDirectus,
+   createItem,
    graphql,
    rest,
    staticToken,
@@ -141,7 +142,9 @@ export const signIn = async (
 export type InterestData = {
    name: string,
    email: string,
-   message: string
+   message: string, 
+   ip?: string,
+   device?: Record<string, any>,
 }
 
 export type CMSReceipt = {
@@ -149,15 +152,23 @@ export type CMSReceipt = {
    errors?: Record<string, string>[] | null
 }
 
-export const createInterest = async (interestData: InterestData): Promise<CMSReceipt> =>  {
-   // TODO: Marcos, implement this function
-
-   const cmsClient = await getCMSClient();
-
-   // const { name, email, message } = interestData;
-
-   // console.log({ name, email, message });
-   console.log("interestData: ", interestData);
-
-   return { success: true };
+export const createInterest = async (interestData: InterestData): Promise<CMSReceipt> => {
+   const client = await getCMSClient();
+   try {
+      await client.request(
+         createItem(
+            "agrossinos_interest",
+            { ...interestData }
+         )
+      ).then((response) => {
+         console.log(response);
+         return { success: true };
+      })
+   } catch (error) {
+      console.error(error);
+      return { 
+         success: false, 
+         errors: error.errors.map(err => err.message) 
+      };
+   }
 }
