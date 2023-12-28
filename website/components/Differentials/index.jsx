@@ -43,7 +43,7 @@ export default function Differentials() {
     left: 0,
     width: '100%',
     height: '100%',
-    background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%)',
+    background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.50) 100%)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -74,7 +74,7 @@ export default function Differentials() {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="flex flex-col gap-10" style={{ ...overlayStyle, opacity: hovered[index] ? 1 : 0 }}>
+            <div className="flex flex-col gap-10" style={{ ...overlayStyle, opacity: hovered[index] }}>
               <div style={textContainerStyle}>
                 <p className="text-[16px] md:text-[45px] text-center font-bold text-white">{images[index].text}</p>
               </div>

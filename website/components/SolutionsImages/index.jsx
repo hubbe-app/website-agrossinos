@@ -48,12 +48,11 @@ export default function SolutionsImages() {
         <div
           className="xl:w-1/2 w-full xl:h-[763px] sm:h-[500px] h-[339px]"
           style={bgStyleFirst}
-          onMouseEnter={() => setHovered1(true)}
-          onMouseLeave={() => setHovered1(false)}
         >
           <Link href="/insumos">
-            <div className="flex flex-col gap-10" style={{ ...overlayStyle, opacity: hovered1 ? 1 : 0 }}>
-              <p className="xl:text-[60px] text-[35px] text-center font-bold">Grãos e insumos para rações</p>
+            <div className="flex flex-col gap-10" style={{ ...overlayStyle, opacity: hovered1 }}>
+              <p className="xl:text-[54px] text-[35px] text-center font-bold">Grãos e insumos para rações</p>
+              <p className="xl:text-[54px] text-[35px] text-center font-bold">para rações</p>
               <button className="py-2 px-10 bg-white rounded-full text-[#4C5938] text-[20px]">Conheça</button>
             </div>
           </Link>
@@ -61,12 +60,10 @@ export default function SolutionsImages() {
         <div
           className="xl:w-1/2 w-full xl:h-[763px] sm:h-[500px] h-[339px]"
           style={bgStyleSecond}
-          onMouseEnter={() => setHovered2(true)}
-          onMouseLeave={() => setHovered2(false)}
         >
           <Link href="/alimentos">
-            <div className="flex flex-col gap-10" style={{ ...overlayStyle, opacity: hovered2 ? 1 : 0 }}>
-              <p className="xl:text-[60px] text-[35px] text-center font-bold">Alimentos</p>
+            <div className="flex flex-col gap-10" style={{ ...overlayStyle, opacity: hovered2 }}>
+              <p className="xl:text-[54px] text-[35px] text-center font-bold">Alimentos</p>
               <button className="py-2 px-10 bg-white rounded-full text-[#4C5938] text-[20px]">Conheça</button>
             </div>
           </Link>

@@ -11,8 +11,7 @@ export default function Home() {
     <main className="flex flex-col">
       <div className="h-[84vh]">
         <MainBanner
-          // videoSrc={require("../public/assets/video.mp4")}
-          videoSrc="https://s3-figma-videos-production-sig.figma.com/video/1024672175368923531/TEAM/6a2c/8521/-e199-4048-813c-d84beebd9a66?Expires=1702857600&Signature=fBU5oapLJcEDPEzPUSUCP68KkdTXvmxMX1sEuS~i2zA8Kv0vf1fFGgoSGTsqVqfMOzRWNimWA0La8~R1FQPBtHRSVtJaU5KxxSUE9UpDOxhsyxoNnWr8sb3UK~nH-nApoOxofqkEPNmzKBxCZlxihZy-tTepgBPipNal2dATKbk-eTE6svTA45QIwyoTeL4yij0KOB91Z3fQY~sfO7KGYofpKJezmYwWAYUFxFu6PICor62K~IgmR2DBoo1n-bv8cEpr4hr5shEvVrOqLRcjRlHCGTUYZE3nW94Yf4r00UOCHZZgFCu~jQQUycES46iRUvhwas21JRhHf2nEBPHauA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+          videoSrc="https://s3-figma-videos-production-sig.figma.com/video/1024672175368923531/TEAM/6e54/58b0/-bb8b-44c7-bab4-d9f56a0fd837?Expires=1704672000&Signature=Yoay-HCIDFNQ~tB2I-rNIW~qnBWHF4mjUmNlxARwVCmzeX1ozkohvWryQEDk6o~XtrbNvtHlF65RsiOsewWbqndshlnglf8Hp5TsH7CT-dxAl7pPyKobw~y2TXJ7CDky77S1gFQG8J-49TmPizOmfikE0eN9NZgHa6fqsEju1qvN08njuoZz29OzSOc6lgqLyWuSG97B59K2z-Cnt03jZMo7Yqgyg9~k8X9L8idhAufFXvx3P8xl8wt9iVXZ7f2Ja9-3ET3xUh9OFbzovlJT-vgGUHCGGpLx7kiZ0J1N76gZ49WlI1R9wQ4vUHZ5kE0-7AgllMm4I~SLPliis~fxhw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
           title="A ponte para grandes"
           subtitle="negócios no agro"
           buttonText="Saiba mais"
