@@ -27,9 +27,9 @@ export default function Form() {
         </div>
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="comment" name="comment" value="Mensagem" />
+            <Label htmlFor="message" name="message" value="Mensagem" />
           </div>
-          <Textarea id="comment" name="comment" required rows={4} />
+          <Textarea id="message" name="message" required rows={4} />
         </div>
         <p>
           <button className="bg-[#4C5938] py-3 px-5 rounded-md text-white" type="submit">Enviar</button>
