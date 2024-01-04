@@ -164,6 +164,7 @@ export const createInterest = async (interestData: InterestData): Promise<CMSRec
          return { success: true };
       })
    } catch (error) {
+      console.log(error);
       return { 
          success: false, 
          errors: error.errors.map(err => err.message) 
