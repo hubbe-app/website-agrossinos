@@ -8,24 +8,68 @@ export default function Form() {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState({ message: '', className: 'text-green-500' });
-  const [inputData, setInputData] = useState({ name: '', email: '', message: '' })
+  const [inputData, setInputData] = useState({ name: '', email: '', message: '' });
+  const [errors, setErrors] = useState(null);
 
   const handleInputData = (e) => setInputData({ ...inputData, [e.target.name]: e.target.value });
 
   const submit = () => {
-    setLoading(true);
-    (async (data) => {
-      const result = await handleContactFormAction(data);
-      setLoading(false);
-      if (result.success) {
-        setSuccess({ message: 'Mensagem enviada com sucesso!', className: 'text-green-500' });
-        setInputData({ name: '', email: '', message: '' });
-      } else {
-        setSuccess({ message: 'Falha ao enviar!', className: 'text-red-500' });
-      }
+    // const errors = validateForm(inputData);
+    const formErrors = validateForm(inputData);
 
-    })(inputData);
+    if (formErrors) {
+      console.log(formErrors);
+    }
+  
+    if (Object.keys(formErrors).length === 0) {
+      setLoading(true);
+      (async (data) => {
+        const result = await handleContactFormAction(data);
+        setLoading(false);
+        if (result.success && !formErrors) {
+          setSuccess({ message: 'Mensagem enviada com sucesso!', className: 'text-green-500' });
+          setInputData({ name: '', email: '', message: '' });
+        } else {
+          setSuccess({ message: 'Falha ao enviar!', className: 'text-red-500' });
+        }
+      })(inputData);
+    } else {
+      console.log('Erros de validação:', formErrors);
+    }
   }
+  
+  const validateForm = (data) => {
+    const errors = {};
+  
+    if (data.name.length < 3) {
+      errors.name = 'Nome deve ter pelo menos 3 caracteres';
+    }
+  
+    if (data.email.length < 3 || !data.email.includes('@')) {
+      errors.email = 'Email inválido';
+    }
+  
+    if (data.message.length < 3) {
+      errors.message = 'Mensagem deve ter pelo menos 3 caracteres';
+    }
+    setErrors(errors);
+    return errors;
+  }  
+
+  // const submit = () => {
+  //   setLoading(true);
+  //   (async (data) => {
+  //     const result = await handleContactFormAction(data);
+  //     setLoading(false);
+  //     if (result.success) {
+  //       setSuccess({ message: 'Mensagem enviada com sucesso!', className: 'text-green-500' });
+  //       setInputData({ name: '', email: '', message: '' });
+  //     } else {
+  //       setSuccess({ message: 'Falha ao enviar!', className: 'text-red-500' });
+  //     }
+
+  //   })(inputData);
+  // }
 
   return (
     <form>
@@ -34,21 +78,30 @@ export default function Form() {
           <div className="mb-2 block">
             <Label htmlFor="name" value="Nome" />
           </div>
-          <TextInput disabled={loading} id="name" name='name' type="text" sizing="sm" className="border-gray-100" value={inputData.name} onChange={handleInputData} />
+          <TextInput disabled={loading} id="name" name='name' type="text" sizing="sm" minLength={3} className="border-gray-100" value={inputData.name} onChange={handleInputData} />
+          {errors && errors.name && errors.name ? (
+            <p className="text-red-600 text-[13px] pt-[5px]">O nome deve conter mais que 3 caracteres.</p>
+          ) : null}
         </div>
 
         <div>
           <div className="mb-2 block">
             <Label htmlFor="email" name="email" value="E-mail" />
           </div>
-          <TextInput disabled={loading} id="email" name="email" type="text" sizing="md" value={inputData.email} onChange={handleInputData} />
+          <TextInput disabled={loading} id="email" name="email" type="text" sizing="md" minLength={3} value={inputData.email} onChange={handleInputData} />
+          {errors && errors.email && errors.email ? (
+            <p className="text-red-600 text-[13px] pt-[5px]">O campo email é inválido.</p>
+          ) : null}
         </div>
 
         <div>
           <div className="mb-2 block">
             <Label htmlFor="message" name="message" value="Mensagem" />
           </div>
-          <Textarea disabled={loading} id="message" name="message" required rows={4} value={inputData.message} onChange={handleInputData} />
+          <Textarea disabled={loading} id="message" name="message" required rows={4} minLength={3} value={inputData.message} onChange={handleInputData} />
+          {errors && errors.message && errors.message ? (
+            <p className="text-red-600 text-[13px] pt-[5px]">O campo mensagem deve conter mais que 3 caracteres.</p>
+          ) : null}
         </div>
 
         <div className='flex items-center'>
