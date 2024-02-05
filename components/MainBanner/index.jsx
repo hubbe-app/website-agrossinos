@@ -2,15 +2,17 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import Image from 'next/image';
 
-export default function MainBanner({ videoSrc, title, subtitle, minorSubtitle, minorSubtitleTwo, buttonText, buttonLink }) {
+export default function MainBanner({ imgSrc, imgAlt, videoSrc, title, subtitle, minorSubtitle, minorSubtitleTwo, buttonText, buttonLink }) {
   return (
     <>
       <div className="w-full absolute z-[-10] object-cover">
-        <video autoPlay muted loop src={videoSrc} className="w-full h-[84vh] object-cover" />
+        {videoSrc && <video autoPlay muted loop src={videoSrc} className="w-full h-[84vh] object-cover" />}
+        {imgSrc && <Image src={imgSrc} className="w-full h-[84vh] object-cover max-h-[84vh]" alt={imgAlt}/>}
       </div>
       <div className="h-full">
-        <div className="pt-[300px] px-4 2xl:px-56 relative z-20 gradient-background">
+        <div className="pt-[300px] px-4 2xl:px-56 relativegradient-background">
           <div className="text-white md:text-[72px] text-[35px] font-extrabold">
             <h1>{title}</h1>
             <h1>{subtitle}</h1>

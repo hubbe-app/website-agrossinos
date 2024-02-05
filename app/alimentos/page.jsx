@@ -9,19 +9,21 @@ import img3 from '../../public/assets/a3.png';
 import videos from '@/cms/videos.json';
 
 export default function Insumos() {
-  const contentOne = " Agrossinos atua na comercialização de milho, farelo, óleo e casca de soja, farelo de trigo, farelo de arroz desengordurado, farelo de canola, farelo de girassol, farelo de soja semi-integral, farinha de carne, aveia, sal e fosfato.";
-  const contentTwo = "Eficiência, qualidade e proximidade que impulsionam o crescimento.";
+  const contentOne = "Além dos grãos, outro ramo importante de negócio da Agrossinos são os alimentos.";
+  const contentTwo = "Com experiência consolidada tanto para atacado, como  para varejo, fornecemos cortes de frango, carne bovina, batatas e pescados para o consumidor.";
+  const contentThree = "Nossa equipe trabalha para oferecer suporte personalizado a cada cliente em todos os processos de negociação e temos como objetivo criar conexões fortes para impulsionar o crescimento do agronegócio e parceiros.";
 
   return (
     <div>
       <div className="h-[84vh]">
         <MainBanner
             videoSrc={videos.alimentos}
-            title="Negociações de Alimentos"
+            title="Soluções em alimentos"
+            subtitle="para atacado e varejo"
             minorSubtitle="Mercados: avícola, bovino e laticínio"
         />
       </div>
-      <Content contentOne={contentOne} contentTwo={contentTwo} />
+      <Content contentOne={contentOne} contentTwo={contentTwo} contentThree={contentThree} />
       <MainCarousel img1={img1} img2={img2} img3={img3} />
     </div>
   )
