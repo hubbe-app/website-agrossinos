@@ -2,15 +2,15 @@ import React from 'react';
 import MainBanner from '@/components/MainBanner';
 import Contact from '@/components/Contact';
 import Map from '@/components/Map';
-import videos from '@/cms/videos.json';
-
+import woman from '../../public/assets/woman.jpg'
 export default function FaleConosco() {
 
   return (
     <div>
         <div className="h-[84vh]">
             <MainBanner
-                videoSrc={videos.fale_conosco}
+                imgSrc={woman}
+                imgAlt='Mulher com tablet'
                 title="Fale conosco"
             />
         </div>
