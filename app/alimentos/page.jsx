@@ -15,7 +15,7 @@ export default function Insumos() {
 
   return (
     <div>
-      <div className="h-[84vh]">
+      <div className="h-[79vh] max-h-[79vh] 2xl:h-[84vh] 2xl:max-h-[84vh]">
         <MainBanner
             videoSrc={videos.alimentos}
             title="Soluções em alimentos"
