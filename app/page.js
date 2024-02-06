@@ -17,7 +17,7 @@ export default function Home() {
           title="A ponte para grandes"
           subtitle="negócios no agro"
           buttonText="Saiba mais"
-          buttonLink="/"
+          buttonLink="/quemsomos"
         />
       </div>
       <Content contentOne={contentOne} contentTwo={contentTwo} />
