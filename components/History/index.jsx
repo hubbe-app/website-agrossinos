@@ -32,7 +32,7 @@ export default function History() {
                         <h1 className="lg:text-[40px] text-[32px] font-extrabold">Empreendedorismo, pioneirismo e inovação</h1>
                         <h1></h1>
                     </div>
-                    <div className="flex flex-col gap-3 text-[#090808] md:text-[24px] text-[16px] justify-between md:h-full">
+                    <div className="flex flex-col gap-3 text-[#090808] md:text-[22px] text-[16px] justify-between md:h-full">
                         <p>A trajetória de Gilberto Tavares se funde com a empresa, que foi fundada por ele em 1977 na cidade de Garibaldi (RS) como Asa Branca Comércio e Representações Ltda, nome que carregou por 20 anos. E, foi no ano de 2004, com a mudança da família para a cidade de São Leopoldo - região metropolitana de Porto Alegre, que iniciou-se a Agrossinos.</p>
                         <p>A tradição e a inovação são os diferenciais do negócio que tem em seu DNA o comprometimento, construindo não apenas uma marca, mas a história de um legado que atravessa gerações.</p>
                         <p>A Agrossinos é referência no setor, sempre alicerçada no pilar de credibilidade no mercado e confiança do cliente.</p>
