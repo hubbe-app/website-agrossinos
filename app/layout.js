@@ -13,7 +13,7 @@ config.autoAddCss = false; /* eslint-disable import/first */
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Agrosinos',
+  title: 'Agrossinos',
   description: 'A ponte para grandes negócios no agro.',
 }
 
