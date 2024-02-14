@@ -22,7 +22,7 @@ export default function Mvv() {
             <p className="text-[20px] text-[#212529]">Ser reconhecida por clientes e fornecedores como referência no setor do agronegócio.</p>
         </div>
 
-        <div className="flex flex-col gap-2 w-full md:w-1/4">
+        <div className="flex flex-col gap-2 w-full md:w-2/5">
             <div className="flex flex-row gap-2 items-center">
                 <FontAwesomeIcon icon={faGem} size="xl" />
                 <h1 className="text-[28px] text-[090808] font-bold">Valores</h1>

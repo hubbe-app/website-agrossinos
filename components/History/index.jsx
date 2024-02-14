@@ -27,10 +27,9 @@ export default function History() {
                 <div className="md:w-[486px] md:h-[605px] w-[360px] h-[448px] flex flex-row justify-center items-center">
                     <Image src={man.src} width={486} height={40} alt="Imagem do fundador da Agrossinos" />
                 </div>
-                <div className="w-full h-full md:w-1/2 flex flex-col gap-2">
+                <div className="w-full h-full md:w-[60%] flex flex-col gap-2">
                     <div className="text-[#090808]">
                         <h1 className="lg:text-[40px] text-[32px] font-extrabold">Empreendedorismo, pioneirismo e inovação</h1>
-                        <h1></h1>
                     </div>
                     <div className="flex flex-col gap-3 text-[#090808] md:text-[22px] text-[16px] justify-between md:h-full">
                         <p>A trajetória de Gilberto Tavares se funde com a empresa, que foi fundada por ele em 1977 na cidade de Garibaldi (RS) como Asa Branca Comércio e Representações Ltda, nome que carregou por 20 anos. E, foi no ano de 2004, com a mudança da família para a cidade de São Leopoldo - região metropolitana de Porto Alegre, que iniciou-se a Agrossinos.</p>

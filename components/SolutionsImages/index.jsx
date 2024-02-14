@@ -48,8 +48,8 @@ export default function SolutionsImages() {
           <Link href='/insumos'>
             <div className='flex flex-col gap-10' style={{ ...overlayStyle, opacity: hovered1 }}>
               <div>
-                <p className='xl:text-[54px] text-[35px] text-center font-bold'>Grãos e insumos</p>
-                <p className='xl:text-[54px] text-[35px] text-center font-bold'>para rações</p>
+                <p className='xl:text-[54px] text-[35px] text-center font-bold leading-tight'>Grãos e insumos</p>
+                <p className='xl:text-[54px] text-[35px] text-center font-bold leading-tight'>para rações</p>
               </div>
               <button className='py-2 px-10 bg-white rounded-full text-[#4C5938] text-[20px]'>Conheça</button>
             </div>
