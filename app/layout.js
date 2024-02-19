@@ -8,24 +8,26 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import Footer from '@/components/Footer';
 import FooterBar from '@/components/FooterBar';
+import WhatsAppButton from '@/components/WhatsAppButton';
 config.autoAddCss = false; /* eslint-disable import/first */
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Agrossinos',
   description: 'A ponte para grandes negócios no agro.',
-}
+};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={inter.className}>
         <Navbar />
         {children}
+        <WhatsAppButton />
         <Footer />
         <FooterBar />
       </body>
     </html>
-  )
+  );
 }
