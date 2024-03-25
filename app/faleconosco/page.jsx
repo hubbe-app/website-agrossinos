@@ -30,8 +30,8 @@ export default function FaleConosco() {
             <Link href='/alimentos'>
               <h1 className='font-bold text-[20px] 2xl:text-[32px]'>Alimentos</h1>
             </Link>
-            <Link href='tel:+555135894229'>
-              <h1 className='text-[16px] 2xl:text-[24px]'>(51) 3589.4229</h1>
+            <Link href='tel:+555135881231'>
+              <h1 className='text-[16px] 2xl:text-[24px]'>(51) 3588.1231 | 3566.3579</h1>
             </Link>
             <Link href='mailto:comercial@agrossinos.com.br'>
               <h1 className='text-[16px] 2xl:text-[24px]'>comercial@agrossinos.com.br</h1>

@@ -9,7 +9,7 @@ import img3 from '../../public/assets/a3.png';
 import videos from '@/cms/videos.json';
 
 export default function Insumos() {
-  const contentOne = "Além dos grãos, outro ramo importante de negócio da Agrossinos são os alimentos.";
+  const contentOne = "Além dos grãos, outro ramo importante de negócio da Agrossinos é o de alimentos.";
   const contentTwo = "Com experiência consolidada tanto para atacado, como  para varejo, fornecemos cortes de frango, carne bovina, batatas e pescados para o consumidor.";
   const contentThree = "Nossa equipe trabalha para oferecer suporte personalizado a cada cliente em todos os processos de negociação e temos como objetivo criar conexões fortes para impulsionar o crescimento do agronegócio e parceiros.";
 

@@ -6,7 +6,7 @@ import videos from '@/cms/videos.json';
 
 export default function Home() {
   const contentOne =
-    'A Agrossinos consolidou-se como referência no mercado ao longo de mais de quatro décadas, cultivando parcerias sólidas e conquistando resultados notáveis nas negociações de grãos, insumos e alimentos.';
+    'A Agrossinos consolidou-se como referência no mercado, cultivando parcerias sólidas e conquistando resultados notáveis nas negociações de grãos, insumos e alimentos.';
   const contentTwo = 'Nossa trajetória é uma verdadeira ponte para oportunidades no agronegócio.';
 
   return (
