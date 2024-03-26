@@ -61,7 +61,7 @@ export const makeClient = async (): Promise<CMSAuthClient | CMSGuestClient> => {
    if (tokenClient) {
       return tokenClient;
    }
-
+   
    if (getLocalStorage()?.getItem("token") || process.env.ADMIN_STATIC_TOKEN) {
       const token =
          (getLocalStorage()?.getItem("token") as string) ||
@@ -71,6 +71,7 @@ export const makeClient = async (): Promise<CMSAuthClient | CMSGuestClient> => {
          .with(rest())
          .with(graphql());
       clientSet.add(tokenClient);
+      tokenClient.globals.fetch = async (url, options) => spyFetch(url, { ...options, cache: 'no-store' });
       return tokenClient;
    }
 
@@ -162,7 +163,7 @@ export const createInterest = async (interestData: InterestData): Promise<CMSRec
          )
       ).then((response) => {
          return { success: true };
-      })
+      });
    } catch (error) {
       console.log(error);
       return { 
@@ -171,3 +172,17 @@ export const createInterest = async (interestData: InterestData): Promise<CMSRec
       };
    }
 }
+
+const fetchToCurl = (url: string, options: RequestInit): string => {
+   const method = options.method || 'GET';
+   const headers = Object.entries(options.headers || {})
+     .map(([key, value]) => `-H "${key}: ${value}"`)
+     .join(' ');
+   const body = options.body ? `-d '${options.body}'` : '';
+   return `curl -X ${method} ${headers} ${body} ${url}`;
+ };
+ 
+ const spyFetch = (url: string, options: RequestInit): Promise<Response> => {
+   console.log(fetchToCurl(url, options));
+   return fetch(url, options);
+ };

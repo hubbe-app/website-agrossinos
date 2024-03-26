@@ -14,62 +14,51 @@ export default function Form() {
   const handleInputData = (e) => setInputData({ ...inputData, [e.target.name]: e.target.value });
 
   const submit = () => {
-    // const errors = validateForm(inputData);
+    
     const formErrors = validateForm(inputData);
 
-    if (formErrors) {
-      console.log(formErrors);
+    if (Object.keys(formErrors).length > 0) {
+      console.log('Erros de validação:', formErrors);
+      return false;
     }
-  
-    if (Object.keys(formErrors).length === 0) {
+
+    try {
       setLoading(true);
       (async (data) => {
-        const result = await handleContactFormAction(data);
+        const { messageId } = await handleContactFormAction(data);
         setLoading(false);
-        if (result.success && !formErrors) {
+        if (messageId) {
           setSuccess({ message: 'Mensagem enviada com sucesso!', className: 'text-green-500' });
-          setInputData({ name: '', email: '', message: '' });
         } else {
           setSuccess({ message: 'Falha ao enviar!', className: 'text-red-500' });
         }
       })(inputData);
-    } else {
-      console.log('Erros de validação:', formErrors);
+    } catch (error) {
+      console.warn(error);
+    } finally {
+      setTimeout(() => setSuccess({ message: '', className: 'text-green-500' }), 3000);
+      setInputData({ name: '', email: '', message: '' });
+      setLoading(false);
     }
   }
-  
+
   const validateForm = (data) => {
     const errors = {};
-  
+
     if (data.name.length < 3) {
       errors.name = 'Nome deve ter pelo menos 3 caracteres';
     }
-  
+
     if (data.email.length < 3 || !data.email.includes('@')) {
       errors.email = 'Email inválido';
     }
-  
+
     if (data.message.length < 3) {
       errors.message = 'Mensagem deve ter pelo menos 3 caracteres';
     }
     setErrors(errors);
     return errors;
-  }  
-
-  // const submit = () => {
-  //   setLoading(true);
-  //   (async (data) => {
-  //     const result = await handleContactFormAction(data);
-  //     setLoading(false);
-  //     if (result.success) {
-  //       setSuccess({ message: 'Mensagem enviada com sucesso!', className: 'text-green-500' });
-  //       setInputData({ name: '', email: '', message: '' });
-  //     } else {
-  //       setSuccess({ message: 'Falha ao enviar!', className: 'text-red-500' });
-  //     }
-
-  //   })(inputData);
-  // }
+  }
 
   return (
     <form>
