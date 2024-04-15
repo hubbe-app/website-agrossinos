@@ -5,18 +5,7 @@ import people1 from '../../public/assets/people1.jpg';
 import people2 from '../../public/assets/people2.jpg';
 
 export default function History() {
-    const bgStyleOne = {
-        backgroundImage: `url(${people1.src})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-    }
-    const bgStyleTwo = {
-        backgroundImage: `url(${people2.src})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-    }
+
   return (
     <>
         <div className="h-full py-10">
@@ -39,9 +28,9 @@ export default function History() {
                 </div>
             </div>
         </div>
-        <div className="2xl:px-56 px-2 w-full h-[460px] sm:flex-row flex flex-col gap-10 pb-10">
-            <div className="sm:w-1/2 w-full h-full" style={bgStyleOne} />
-            <div className="sm:w-1/2 w-full h-full" style={bgStyleTwo} />
+        <div className="2xl:px-56 px-2 w-full sm:flex-row flex flex-col gap-10 pb-10">
+            <Image width={5454} height={3634} className='sm:w-1/2 w-full h-full aspect-auto' src={people1}  alt='família'/>
+            <Image width={5454} height={3634} className='sm:w-1/2 w-full h-full' src={people2}  alt='família'/>
         </div>
     </>
   )
